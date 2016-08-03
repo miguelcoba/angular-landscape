@@ -108,7 +108,7 @@
             <p>Intelligent code completion</p>
             <p><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a></p>
             <p><a href="http://code.visualstudio.com/">Visual Studio Code</a></p>
-            <p><a href="https://www.jetbrains.com/webstorm/">Webstorm</a></p>
+            <p><a href="https://www.jetbrains.com/webstorm/">WebStorm</a></p>
 					</section>
 
           <section>
@@ -129,27 +129,177 @@
 				    <section>
 						<h1>TypeScript</h1>
 
-						<p></p>
-						<p></p>
+						<p>TypeScript is a typed superset of JavaScript that compiles to plain JavaScript</p>
+						<p>Any browser. Any host. Any OS. Open Source</p>
 					</section>
 					
 					<section>
-						<h1>Features</h1>
-						<p class="fragment"></p>
+						<h1>Starts and ends with JavaScript</h1>
+						<p class="fragment">Use existing JavaScript code</p>
+            <p class="fragment">Incorporate popular JavaScript libraries</p>
+            <p class="fragment">Call TypeScript code from JavaScript</p>
+            <p class="fragment">TypeScript compiles to clean, simple JavaScript code</p>
 					</section>
+
+					<section>
+						<h1>String tools for large apps</h1>
+						<p class="fragment">Use highly-productive development tools</p>
+						<p class="fragment">Leverage static checking and code refactoring</p>
+						<p class="fragment">Types are optional</p>
+						<p class="fragment">Type inference allows static verification of code</p>
+					</section>
+
+					<section>
+						<h1>State of the art JavaScript</h1>
+            <p class="fragment">Supports the latest JavaScript features</p>
+            <p class="fragment">Current: ECMAScript 2015</p>
+            <p class="fragment">Future: async functions and decorators</p>
+            <p class="fragment">Are compiled into simple JavaScript that targets ECMAScript 3 environments</p>
+					</section>
+
+					<section>
+						<h1>Install</h1>
+            <h3>node.js</h3>
+						<pre><code class="javascript" data-trim style="font-size: 18px;">
+// install
+npm install -g typescript
+
+// compile
+tsc helloworld.ts
+						</code></pre>
+
+            <h3>IDEs/Editors</h3>
+            <p><a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
+            <p><a href="https://www.jetbrains.com/webstorm/">WebStorm</a></p>
+            <p><a href="https://github.com/Microsoft/TypeScript-Sublime-Plugin">Sublime Text</a></p>
+            <p><a href="https://atom.io/packages/atom-typescript">Atom</a></p>
+            <p><a href="https://github.com/ananthakumaran/tide">Emacs</a></p>
+            <p><a href="ihttps://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support#vim">Vim</a></p>
+          </section>
+
+					<section>
+						<h1>Quickstart</h1>
+            <h3>Install</h3>
+						<pre><code class="javascript" data-trim style="font-size: 18px;">
+npm install -g typescript
+						</code></pre>
+				  </section>
+
+					<section>
+						<h1>Quickstart</h1>
+            <h3>greeter.js</h3>
+						<pre><code class="javascript" data-trim style="font-size: 18px;">
+function greeter(person) {
+  return "Hello, " + person;
+}
+
+var user = "Jane User";
+
+document.body.innerHTML = greeter(user);
+						</code></pre>
+				  </section>
+
+					<section>
+						<h1>Quickstart</h1>
+            <h3>greeter.html</h3>
+						<pre><code class="html" data-trim style="font-size: 18px;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;title&gt;TypeScript Greeter&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;script src=&quot;greeter.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+						</code></pre>
+				  </section>
+
+					<section>
+						<h1>Quickstart</h1>
+            <h3>Compile</h3>
+						<pre><code class="bash" data-trim style="font-size: 18px;">
+tsc greeter.ts
+						</code></pre>
+				  </section>
+	
+					<section>
+						<h1>Quickstart</h1>
+            <h3>Type annotations</h3>
+						<pre><code class="javascript" data-trim style="font-size: 18px;">
+function greeter(person: string) {
+  return "Hello, " + person;
+}
+
+var user = "Jane User";
+
+document.body.innerHTML = greeter(user);
+						</code></pre>
+            <p>Compiles cleanly and lets the IDE suggest completions</p>
+				  </section>
+
+					<section>
+						<h1>Quickstart</h1>
+            <h3>Type annotations</h3>
+            <img src="img/1.png"/>
+				  </section>
+
+					<section>
+						<h1>Quickstart</h1>
+            <h3>Type annotations</h3>
+						<pre><code class="javascript" data-trim style="font-size: 18px;">
+function greeter(person: string) {
+  return "Hello, " + person;
+}
+
+var user = [0, 1, 2];
+
+document.body.innerHTML = greeter(user);
+						</code></pre>
+            <p>Compiler will show an error</p>
+						<pre><code class="bash" data-trim style="font-size: 18px;">
+greeter.ts(7,26): Supplied parameters do not match any signature of call target
+						</code></pre>
+				  </section>
+
+					<section>
+						<h1>Quickstart</h1>
+            <h3>Inheritance</h3>
+						<pre><code class="javascript" data-trim style="font-size: 18px;">
+class Student {
+  fullName: string;
+  constructor(public firstName, public middleInitial, public lastName) {
+    this.fullName = firstName + " " + middleInitial + " " + lastName;
+  }
+}
+
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+
+function greeter(person : Person) {
+  return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+var user = new Student("Jane", "M.", "User");
+
+document.body.innerHTML = greeter(user);
+						</code></pre>
+				  </section>
 				</section>
 
 				<section>
 				    <section>
 						<h1>Routing</h1>
 
-						<p></p>
-						<p></p>
+						<p>Angular Component Router enables navigation from one view to the next</p>
+						<p>Can interpret a browser URL as an instruction to navigate to a given view</p>
+            <p>Can pass parameters to help decide what specific content to present</p>
+            <p>Can bind to links on the page and it will navigate to the appropriate view when they are clicked</p>
 					</section>
 					
 					<section>
-						<h1>Features</h1>
-						<p class="fragment"></p>
+						<h1>Learn more</h1>
+            <p class="fragment"><a href="https://angular.io/docs/ts/latest/guide/router.html">Router documentation</a></p>
 					</section>
 				</section>
 
@@ -157,13 +307,33 @@
 				    <section>
 						<h1>Components</h1>
 
-						<p></p>
-						<p></p>
+						<p>Components are the main way to build and specify elements and logic on the page</p>
+						<p>Combines directives, controllers and scope from Angular 1</p>
 					</section>
+
+					<section>
+						<h1>Example Component</h1>
+						<pre><code class="javascript" data-trim style="font-size: 18px;">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  template: '<div>I am {{name}}. <button (click)="logName()">Click me</button></div>'
+})
+export class MyComponent {
+  constructor() {
+    this.name = 'Miguel'
+  }
+  logName() {
+    console.log('Regards  ', this.name)
+  }
+}
+						</code></pre>
+				  </section>
 					
 					<section>
-						<h1>Features</h1>
-						<p class="fragment"></p>
+						<h1>Learn more</h1>
+            <p class="fragment"><a href="http://learnangular2.com/components/">Components documentation</a></p>
 					</section>
 				</section>
 				
@@ -171,27 +341,34 @@
 				    <section>
 						<h1>Augury</h1>
 
-						<p></p>
-						<p></p>
+						<p>A Google Chrome Dev Tools extension for debugging Angular 2 applications</p>
+            <p><a href="https://augury.angular.io">https://augury.angular.io</a></p>
 					</section>
 					
 					<section>
-						<h1>Features</h1>
-						<p class="fragment"></p>
+            <img src="https://augury.angular.io/images/augury-screenloop.gif"/>
 					</section>
-				</section>				
+				</section>
 				
 				<section>
 				    <section>
 						<h1>Angular Material</h1>
 
-						<p></p>
-						<p></p>
+						<p>Material Design components for Angular 2 apps</p>
+            <p><a href="https://material.angular.io">https://material.angular.io</a></p>
 					</section>
 					
 					<section>
 						<h1>Features</h1>
-						<p class="fragment"></p>
+						<p class="fragment">Comprehensive, modern UI components that work across web, mobile and desktop</p>
+						<p class="fragment">Fast and consistent. Tested on IE11, Chrome, Edge, Firefox and Safari</p>
+						<p class="fragment">Themable, accessible and internationalized</p>
+						<p class="fragment">Integrates seamlessly with Angular 2</p>
+					</section>
+
+					<section>
+						<h3>Kara Ericson's ng-conf 2016 live coding session</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rRiV_b3WsoY" frameborder="0" allowfullscreen></iframe>
 					</section>
 				</section>
 
@@ -199,27 +376,43 @@
 				    <section>
 						<h1>Progressive Webapps</h1>
 
-						<p></p>
-						<p></p>
+						<p>A Progressive Web App uses modern web capabilities to deliver an app-like user experience</p>
 					</section>
 					
 					<section>
-						<h1>Features</h1>
-						<p class="fragment"></p>
+            <h3>Angular 2 and Progressive Web Apps - Google I/O 2016</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vAb-2d1vcg8" frameborder="0" allowfullscreen></iframe>
 					</section>
-				</section>				
+				</section>
 
 				<section>
 				    <section>
 						<h1>Electron</h1>
 
-						<p></p>
-						<p></p>
+						<p>Build cross platform desktop apps</p>
+						<p>with JavaScript, HTML, and CSS</p>
 					</section>
 					
 					<section>
 						<h1>Features</h1>
-						<p class="fragment"></p>
+						<p class="fragment">Uses Chromium and Node.js</p>
+						<p class="fragment">Automatic updates</p>
+            <p class="fragment">Native menus &amp; notifications</p>
+            <p class="fragment">Windows installers</p>
+					</section>
+
+					<section>
+						<h1>Apps built on Electron</h1>
+						<p class="fragment">Atom</p>
+						<p class="fragment">Slack</p>
+						<p class="fragment">Visual Studio Code</p>
+						<p class="fragment">Atom</p>
+					</section>
+
+					<section>
+						<h1>Learn more</h1>
+            <p><a href="https://github.com/electron/electron-quick-start">QuickStart</a></p>
+            <p><a href="http://electron.atom.io/docs/">Documentation</a></p>
 					</section>
 				</section>
 
@@ -227,13 +420,32 @@
 				    <section>
 						<h1>Ionic</h1>
 
-						<p></p>
-						<p></p>
+						<p>Open source mobile SDK for developing native and progressive web apps</p>
 					</section>
 					
 					<section>
 						<h1>Features</h1>
-						<p class="fragment"></p>
+						<h3>Performance</h3>
+            <p class="fragment">Virtual DOM rendering</p>
+						<p class="fragment">Hardware accelerated transitions</p>
+						<p class="fragment">Touch optimized gestures</p>
+					</section>
+					<section>
+						<h1>Features</h1>
+						<h3>Angular</h3>
+						<p class="fragment">Builds on top of Angular</p>
+					</section>
+					<section>
+						<h1>Features</h1>
+						<h3>Native</h3>
+						<p class="fragment">Runs inside Cordova or Phonegap</p>
+						<p class="fragment">Deploys natively or as a Progressive Web App</p>
+					</section>
+
+					<section>
+						<h1>Learn more</h1>
+            <p><a href="http://ionicframework.com/">http://ionicframework.com</a></p>
+            <p><a href="http://ionicframework.com/docs/">Documentation</a></p>
 					</section>
 				</section>
 
